@@ -1353,19 +1353,25 @@ namespace EldenRingTool
         }
 
         int statsOffset = 0x3c; //possible but unlikely to change between patches
+        int runeLevelOffset = 0x68; 
         readonly string[] STAT_NAMES = new string[] { "Vigor", "Mind", "Endurance", "Strength", "Dexterity", "Intelligence", "Faith", "Arcane" };
         public List<(string, int)> getSetPlayerStats(List<(string,int)> newStats = null)
         {
             var ptr = (IntPtr)getCharPtrGameData();
             var ret = new List<(string, int)>();
-
+            int rl = 1;
             for (int i = 0; i < STAT_NAMES.Length; i++)
             {
                 int statOffset = statsOffset + i * 4;
                 int currentVal = ReadInt32(ptr + statOffset);
-                if (newStats != null) { WriteInt32(ptr + statOffset, newStats[i].Item2); }
+                if (newStats != null) {
+                    int statLevel = newStats[i].Item2;
+                    WriteInt32(ptr + statOffset, statLevel);
+                    rl += (statLevel - 10);
+                }
                 ret.Add((STAT_NAMES[i], currentVal));
             }
+            if (newStats != null) { WriteInt32(ptr + runeLevelOffset, rl); }
             return ret;
         }
 
