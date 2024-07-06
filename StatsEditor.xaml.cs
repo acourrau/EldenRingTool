@@ -31,6 +31,7 @@ namespace EldenRingTool
                 txt.HorizontalAlignment = HorizontalAlignment.Stretch;
                 txt.VerticalAlignment = VerticalAlignment.Center;
                 txt.Text = stats[i].Item2.ToString();
+                txt.TextChanged += (sender, e) => CalculateRuneLevel();
                 _boxes.Add(txt);
 
                 var decButton = new Button();
@@ -58,6 +59,7 @@ namespace EldenRingTool
                 statsGrid.Children.Add(decButton);
                 statsGrid.Children.Add(incButton);
             }
+            CalculateRuneLevel();
         }
 
         private void okClicked(object sender, RoutedEventArgs e)
@@ -90,6 +92,25 @@ namespace EldenRingTool
             if (int.TryParse(txt.Text, out int value)) { 
                 txt.Text = (++value).ToString();
             }
+        }
+
+        private void CalculateRuneLevel()
+        {
+            int rl = 1; int i = 0;
+            foreach (UIElement element in statsGrid.Children)
+            {
+                if (element is TextBox textBox)
+                {
+                    if (i++ == 0) { continue; } // skips the dummy stat box displayed.
+
+                    if (int.TryParse(textBox.Text, out int value))
+                    {
+                        rl += (value - 10);
+                    }
+                }
+            }
+
+            rlText.Text = "Rune Level: " + rl.ToString();
         }
     }
 }

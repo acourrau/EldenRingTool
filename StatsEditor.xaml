@@ -13,6 +13,7 @@
     </Window.Resources>
     <StackPanel Orientation="Vertical" x:Name="mainPanel">
         <StackPanel Orientation="Vertical" x:Name="statsPanel">
+            <TextBlock Name="rlText" FontWeight="Bold" TextAlignment="Center">Rune Level: </TextBlock>
             <Grid x:Name="statsGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
