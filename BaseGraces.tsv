@@ -5,7 +5,7 @@ ID	Name
 76100	Limgrave - Limgrave - Church of Elleh
 76111	Limgrave - Limgrave - Gatefront
 76120	Limgrave - Limgrave - Waypoint Ruins Cellar
-76103	Limgrave - Limgrave - Artist's Shack (Limgrave)
+76103	Limgrave - Limgrave - Artist's Shack
 76104	Limgrave - Limgrave - Third Church of Marika
 76105	Limgrave - Limgrave - Fort Haight West
 76106	Limgrave - Limgrave - Agheel Lake South
@@ -34,11 +34,11 @@ ID	Name
 73412	Limgrave - Stormhill - Divine Tower of Limgrave
 76150	Limgrave - Weeping Peninsula - Church of Pilgrimage
 76151	Limgrave - Weeping Peninsula - Castle Morne Rampart
-76152	Limgrave - Weeping Peninsula - Tombsward
+76152	Limgrave - Weeping Peninsula - Tombsward Catacombs
 76153	Limgrave - Weeping Peninsula - South of the Lookout Tower
 76154	Limgrave - Weeping Peninsula - Ailing Village Outskirts
 76155	Limgrave - Weeping Peninsula - Beside the Crater-Pocked Glade
-76156	Limgrave - Weeping Peninsula - Isolated Merchant's Shack (Limgrave)
+76156	Limgrave - Weeping Peninsula - Isolated Merchant's Shack
 76162	Limgrave - Weeping Peninsula - Fourth Church of Marika
 76157	Limgrave - Weeping Peninsula - Bridge of Sacrifice
 76158	Limgrave - Weeping Peninsula - Castle Morne Lift
@@ -61,7 +61,7 @@ ID	Name
 76202	Liurnia of the Lakes - Liurnia of the Lakes - Laskyar Ruins
 76201	Liurnia of the Lakes - Liurnia of the Lakes - Liurnia Lake Shore
 76204	Liurnia of the Lakes - Liurnia of the Lakes - Academy Gate Town
-76217	Liurnia of the Lakes - Liurnia of the Lakes - Artist's Shack (Liurnia of the Lakes)
+76217	Liurnia of the Lakes - Liurnia of the Lakes - Artist's Shack
 76223	Liurnia of the Lakes - Liurnia of the Lakes - Eastern Liurnia Lake Shore
 76222	Liurnia of the Lakes - Liurnia of the Lakes - Gate Town Bridge
 76221	Liurnia of the Lakes - Liurnia of the Lakes - Liurnia Highway North
@@ -159,7 +159,7 @@ ID	Name
 73010	Altus Plateau - Leyndell, Royal Capital - Auzira Hero's Grave
 76314	Altus Plateau - Leyndell, Royal Capital - Capital Rampart
 73430	Altus Plateau - Leyndell, Royal Capital - Divine Tower of West Altus
-73432	Altus Plateau - Leyndell, Royal Capital - Divine Tower of West Altus	 Gate
+73432	Altus Plateau - Leyndell, Royal Capital - Divine Tower of West Altus Gate
 76311	Altus Plateau - Leyndell, Royal Capital - Hermit Merchant's Shack
 76310	Altus Plateau - Leyndell, Royal Capital - Minor Erdtree Church
 76312	Altus Plateau - Leyndell, Royal Capital - Outer Wall Battleground
@@ -224,19 +224,19 @@ ID	Name
 76412	Caelid - Swamp of Aeonia - Heart of Aeonia
 76413	Caelid - Swamp of Aeonia - Inner Aeonia
 76454	Caelid - Greyoll's Dragonbarrow - Bestial Sanctum
-73440	Caelid - Greyoll's Dragonbarrow - Divine Tower of Caelid	 Basement
-73441	Caelid - Greyoll's Dragonbarrow - Divine Tower of Caelid	 Center
+73440	Caelid - Greyoll's Dragonbarrow - Divine Tower of Caelid Basement
+73441	Caelid - Greyoll's Dragonbarrow - Divine Tower of Caelid Center
 73110	Caelid - Greyoll's Dragonbarrow - Dragonbarrow Cave
 76452	Caelid - Greyoll's Dragonbarrow - Dragonbarrow Fork
 76450	Caelid - Greyoll's Dragonbarrow - Dragonbarrow West
 76456	Caelid - Greyoll's Dragonbarrow - Farum Greatbridge
 76453	Caelid - Greyoll's Dragonbarrow - Fort Faroth
 73460	Caelid - Greyoll's Dragonbarrow - Isolated Divine Tower
-76451	Caelid - Greyoll's Dragonbarrow - Isolated Merchant's Shack (Greyoll's Dragonbarrow)
+76451	Caelid - Greyoll's Dragonbarrow - Isolated Merchant's Shack
 76455	Caelid - Greyoll's Dragonbarrow - Lenne's Rise
 73111	Caelid - Greyoll's Dragonbarrow - Sellia Hideaway
 73451	Mountaintops of the Giants - Forbiden Lands - Divine Tower of the East Altus
-73450	Mountaintops of the Giants - Forbiden Lands - Divine Tower of the East Altus	 Gate
+73450	Mountaintops of the Giants - Forbiden Lands - Divine Tower of the East Altus Gate
 76500	Mountaintops of the Giants - Forbiden Lands - Forbidden Lands
 76502	Mountaintops of the Giants - Forbiden Lands - Grand Lift of Rold
 73020	Mountaintops of the Giants - Forbiden Lands - Hidden Path to the Haligtree
