@@ -751,6 +751,25 @@ namespace EldenRingTool
             hpBar.Value = hp > 0 ? hp : 0;
             hpText.Text = $"HP: {(int)hp} / {(int)hpmax}";
 
+            if (hpmax > 0)
+            {
+                double percent = (hp / hpmax) * 100.0;
+
+                if (percent <= 0.0 || percent > 100.0)
+                {
+                    hpPercentText.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    hpPercentText.Visibility = Visibility.Visible;
+                    hpPercentText.Text = $"{percent:0.0}%"; 
+                }
+            }
+            else
+            {
+                hpPercentText.Visibility = Visibility.Collapsed;
+            }
+
             if (poiseBar.Value > poisemax) { poiseBar.Value = 0; }
             poiseBar.Maximum = double.IsNaN(poisemax) ? 1 : poisemax;
             poiseBar.Value = double.IsNaN(poise) ? 0 : poise > 0 ? poise : 0;
