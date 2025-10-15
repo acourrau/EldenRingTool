@@ -482,6 +482,97 @@ namespace EldenRingTool
             maybeDoUpdateCheck();
         }
 
+        private void DarkModeOn(object sender, RoutedEventArgs e)
+        {
+            this.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#2D2D2D"));
+            var fg = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#E0E0E0"));
+
+            foreach (var button in FindVisualChildren<Button>(this))
+                button.Style = (Style)FindResource("DarkModeButton");
+
+            foreach (var cb in FindVisualChildren<CheckBox>(this))
+                cb.Style = (Style)FindResource("DarkModeCheckBox");
+
+            foreach (var tb in FindVisualChildren<TextBlock>(this))
+                tb.Foreground = fg;
+            foreach (var lbl in FindVisualChildren<Label>(this))
+                lbl.Foreground = fg;
+        }
+
+        private void DarkModeOff(object sender, RoutedEventArgs e)
+        {
+            this.Background = SystemColors.ControlBrush;
+
+            foreach (var button in FindVisualChildren<Button>(this))
+                button.ClearValue(StyleProperty);
+
+            foreach (var cb in FindVisualChildren<CheckBox>(this))
+                cb.ClearValue(StyleProperty);
+
+            foreach (var tb in FindVisualChildren<TextBlock>(this))
+                tb.ClearValue(ForegroundProperty);
+            foreach (var lbl in FindVisualChildren<Label>(this))
+                lbl.ClearValue(ForegroundProperty);
+        }
+
+
+        private void ApplyThemeToChildren(DependencyObject parent, Brush bg, Brush fg, Brush buttonBg)
+        {
+            foreach (var child in FindVisualChildren<DependencyObject>(parent))
+            {
+                var textBlock = child as TextBlock;
+                if (textBlock != null)
+                {
+                    textBlock.Foreground = fg;
+                    continue;
+                }
+
+                var label = child as Label;
+                if (label != null)
+                {
+                    label.Foreground = fg;
+                    continue;
+                }
+
+                var button = child as Button;
+                if (button != null)
+                {
+                    button.Background = buttonBg;
+                    button.Foreground = fg;
+                    button.BorderBrush = new SolidColorBrush(Color.FromRgb(80, 80, 80));
+                    continue;
+                }
+
+                var checkBox = child as CheckBox;
+                if (checkBox != null)
+                {
+                    checkBox.Foreground = fg;
+                    continue;
+                }
+
+                var panel = child as Panel;
+                if (panel != null)
+                {
+                    panel.Background = bg;
+                    continue;
+                }
+            }
+        }
+
+        private static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj == null) yield break;
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+            {
+                var child = VisualTreeHelper.GetChild(depObj, i);
+                if (child is T)
+                    yield return (T)child;
+
+                foreach (var childOfChild in FindVisualChildren<T>(child))
+                    yield return childOfChild;
+            }
+        }
+
         private void generateDefaultBuildsFile()
         {
             try
