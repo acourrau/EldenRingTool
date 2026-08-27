@@ -1352,6 +1352,7 @@ Golden Halberd,0113E100,Somber
 Golden Horn Tender,401E894E,None
 Golden Lightning Fortification,40001EDF,None
 Golden Lion Shield,01E11C10,Somber
+Golden Order Flail,00CE2570,Somber
 Golden Order Greatsword,00305ED0,Somber
 Golden Order Principia,4000229E,None
 Golden Order Principles,4000229F,None
@@ -1553,6 +1554,7 @@ Hefty Rancor Pot,401E870A,None
 Hefty Red Lightning Pot,401E8732,None
 Hefty Rock Pot,401E85B6,None
 Hefty Rot Pot,401E871E,None
+Hefty Scimitar,00822850,Smithing
 Hefty Volcano Pot,401E86D8,None
 Helm of Night,104DAAD0,None
 Helm of Solitude,104E4710,None
@@ -1613,6 +1615,7 @@ Human Bone Shard,40003AFC,None
 Ice Crest Shield,01CBE660,Smithing
 Icerind Hatchet,00D6D800,Somber
 Icon Shield,01EA6AE0,Somber
+Idus Sword,04066D10,Smithing
 Igon's Armor (Altered),104DD62C,None
 Igon's Armor,104DD244,None
 Igon's Bell Bearing,401EA74B,None
@@ -1796,6 +1799,7 @@ Leather-Draped Tabard,101C3AF4,None
 Leda's Armor,104C4BA4,None
 Leda's Rune,401E9006,None
 Leda's Sword,04061EF0,Somber
+Leontiel's Greatsword,00365240,Somber
 Let Us Go Together,401EA7AB,None
 Letter for Freyja,401EA3CF,None
 Letter from Volcano Manor,40001FBF,None
@@ -2545,6 +2549,7 @@ Redmane Knight Ogha,4003EBE8,None
 Redmane Painting,4000200E,None
 Redmane Surcoat,101A6634,None
 Reduvia,000FDE80,Somber
+Reed Great Katana,03F72AD0,Smithing
 Regal Omen Bairn,40000BC3,None
 Regalia of Eochaid,0021DFE0,Somber
 Rejection,40001900,None
@@ -2585,6 +2590,7 @@ Repeating Crossbow,0297C1E0,Somber
 Resurrection Painting,40002009,None
 Retaliatory Crossed-Tree,20001FC2,None
 Revered Spirit Ash,401EABF4,None
+Reverse-Bladed Sword,03D8A650,Smithing
 Rickety Shield,01CA38B0,Smithing
 Rift Shield,01CB7130,Smithing
 Rimed Crystal Bud,4000510F,None
@@ -2597,6 +2603,7 @@ Ripple Crescent Halberd,011392E0,Smithing
 Ritual Pot,4000251D,None
 Ritual Shield Talisman,20000FFA,None
 Ritual Sword Talisman,20000802,None
+Ritual Thrusting Shield,03B9FAC0,Smithing
 Rivers of Blood,0089F080,Somber
 Riveted Wooden Shield,01CB2310,Smithing
 Roar Medallion,2000088E,None
@@ -2789,6 +2796,7 @@ Shortbow,02625A00,Smithing
 Shotel,006B1DE0,Smithing
 Siluria's Tree,0103B460,Somber
 Silver Firefly,4000514A,None
+Silver Grooved Shield,01E14320,Smithing
 Silver Horn Tender,401E8944,None
 Silver Mirrorshield,01D9F020,Somber
 Silver Scarab,2000044C,None
