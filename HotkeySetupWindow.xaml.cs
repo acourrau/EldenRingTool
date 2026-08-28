@@ -168,7 +168,7 @@ namespace EldenRingTool
                     MessageBoxButton.OK,
                     MessageBoxImage.Warning
                 );
-                return; 
+                return;
             }
 
             if (OwnerAsMainWindow != null)
@@ -183,12 +183,11 @@ namespace EldenRingTool
 
                     var parts = new List<string>();
 
-                    if ((assignment.HotkeyModifiers & ModifierKeys.Control) != 0) parts.Add("CTRL");
-                    if ((assignment.HotkeyModifiers & ModifierKeys.Alt) != 0) parts.Add("ALT");
-                    if ((assignment.HotkeyModifiers & ModifierKeys.Shift) != 0) parts.Add("SHIFT");
-                    if ((assignment.HotkeyModifiers & ModifierKeys.Windows) != 0) parts.Add("WIN");
+                    var modTokens = GetModifierTokens(assignment.HotkeyModifiers);
+                    if (!string.IsNullOrWhiteSpace(modTokens))
+                        parts.Add(modTokens);
 
-                    parts.Add(assignment.HotkeyKey.ToString().ToUpper());
+                    parts.Add(GetKeyTokenFor(assignment.HotkeyKey));
                     parts.Add(assignment.Action.ToString());
 
                     if (assignment.NeedsParam)
@@ -211,6 +210,42 @@ namespace EldenRingTool
         {
             DialogResult = false;
             Close();
+        }
+
+        private string GetKeyTokenFor(Key key)
+        {
+            foreach (var kvp in KeyMap)
+            {
+                if (kvp.Value == key)
+                    return kvp.Key;
+            }
+            return key.ToString();
+        }
+
+        private string GetModifierTokens(ModifierKeys mk)
+        {
+            var customMods = ModifierKeysToModifiers(mk);
+            var tokens = new List<string>();
+
+            foreach (var kvp in ModMap)
+            {
+                if (kvp.Value != Modifiers.NO_MOD && (customMods & kvp.Value) == kvp.Value)
+                {
+                    tokens.Add(kvp.Key);
+                }
+            }
+
+            return string.Join(" ", tokens);
+        }
+
+        private Modifiers ModifierKeysToModifiers(ModifierKeys mk)
+        {
+            var m = Modifiers.NO_MOD;
+            if ((mk & ModifierKeys.Control) != 0) m |= Modifiers.CTRL;
+            if ((mk & ModifierKeys.Shift) != 0) m |= Modifiers.SHIFT;
+            if ((mk & ModifierKeys.Alt) != 0) m |= Modifiers.ALT;
+            if ((mk & ModifierKeys.Windows) != 0) m |= Modifiers.WIN;
+            return m;
         }
     }
 

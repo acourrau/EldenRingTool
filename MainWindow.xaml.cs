@@ -205,8 +205,6 @@ namespace EldenRingTool
             Closed += MainWindow_Closed;
             Loaded += MainWindow_Loaded;
 
-
-
         retry:
             try
             {
@@ -259,6 +257,14 @@ namespace EldenRingTool
         {
             try
             {
+                if (_hookID != IntPtr.Zero)
+                {
+                    UnhookWindowsHookEx(_hookID);
+                    _hookID = IntPtr.Zero;
+                }
+
+                registeredHotkeys.Clear();
+
                 var windowInfo =
                     $"{Left} " +
                     $"{Top} " +
@@ -283,6 +289,11 @@ namespace EldenRingTool
                 File.WriteAllText(windowStateFile(), windowInfo);
             }
             catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+        }
+
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         void loadWindowState()
@@ -373,7 +384,7 @@ namespace EldenRingTool
                 string[] lines;
                 if (!string.IsNullOrEmpty(linesStr))
                 {
-                    lines = linesStr.Split('\r', '\n');
+                    lines = linesStr.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
                 }
                 else
                 {
@@ -924,24 +935,6 @@ namespace EldenRingTool
             updateMovement();
         }
 
-        private void MainWindow_Closed(object sender, EventArgs e)
-        {
-            try
-            {
-                if (_hookID != IntPtr.Zero)
-                {
-                    UnhookWindowsHookEx(_hookID);
-                    _hookID = IntPtr.Zero;
-                }
-
-                registeredHotkeys.Clear();
-            }
-            catch (Exception ex)
-            {
-                Utils.debugWrite("Error unhooking keyboard: " + ex);
-            }
-        }
-
         private void colMeshAOn(object sender, RoutedEventArgs e)
         {
             _process.freezeOn(ERProcess.DebugOpts.COL_MESH_A);
@@ -1291,6 +1284,22 @@ namespace EldenRingTool
         {
             string existingHotkeys = null;
             string path = hotkeyFile();
+
+            if (Keyboard.IsKeyDown(Key.LeftCtrl))
+            {
+                registeredHotkeys.Clear();
+
+                if (!parseHotkeys())
+                {
+                    MessageBox.Show("Failed to parse hotkey file.");
+                }
+                else
+                {
+                    MessageBox.Show(registeredHotkeys.Count + " hotkeys registered.");
+                    return;
+                }
+            }
+
             if (File.Exists(path))
             {
                 existingHotkeys = File.ReadAllText(path);

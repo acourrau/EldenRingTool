@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EldenRingTool"
         mc:Ignorable="d"
-        Title="ERTool VERSION" Width="345" ResizeMode="NoResize" SizeToContent="Height"
-        >
+        Title="ERTool VERSION" Width="345" ResizeMode="NoResize" SizeToContent="Height">
     <DockPanel Name="dockPanel">
         <StackPanel DockPanel.Dock="Top">
             <StackPanel x:Name="mainPanel">
