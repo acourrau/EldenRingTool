@@ -601,7 +601,7 @@ namespace EldenRingTool
 
                 var tuple = Tuple.Create(key, mods);
 
-                if (registeredHotkeys.ContainsKey(tuple) && IsTargetAppFocused())
+                if (chkHotkeysEnabled?.IsChecked == true && registeredHotkeys.ContainsKey(tuple) && IsTargetAppFocused())
                 {
                     foreach (var act in registeredHotkeys[tuple])
                         doAct(act); 
