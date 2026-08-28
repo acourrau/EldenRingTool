@@ -539,6 +539,7 @@ Briars of Punishment,4000132E,None
 Briars of Sin,40001324,None
 Brick Hammer,00BA0130,Smithing
 Broadsword,001ED2A0,Smithing
+Broken Golden Mask,10517B60,None
 Broken Rune,401E9007,None
 Buckler,01C9C380,Smithing
 Budding Cave Moss,40005169,None
@@ -1335,6 +1336,9 @@ Gold Bracelets,100FDF48,None
 Gold Firefly,4000514B,None
 Gold Scarab,20000456,None
 Gold Sewing Needle,40001FE2,None
+Gold Tattoo (Arm),10517C28,None
+Gold Tattoo (Chest),10517BC4,None
+Gold Tattoo (Leg),10517C8C,None
 Gold Waistwrap,100FDFAC,None
 Gold-Pickled Fowl Foot,400004B0,None
 Gold-Tinged Excrement,4000515E,None
@@ -1799,7 +1803,12 @@ Leather-Draped Tabard,101C3AF4,None
 Leda's Armor,104C4BA4,None
 Leda's Rune,401E9006,None
 Leda's Sword,04061EF0,Somber
+Leontiel's Armor,1051C9E4,None
+Leontiel's Boots,1051CAAC,None
 Leontiel's Greatsword,00365240,Somber
+Leontiel's Hat (Altered),1051CD68,None
+Leontiel's Hat,1051C980,None
+Leontiel's Leather Gloves,1051CA48,None
 Let Us Go Together,401EA7AB,None
 Letter for Freyja,401EA3CF,None
 Letter from Volcano Manor,40001FBF,None
@@ -2796,6 +2805,11 @@ Shortbow,02625A00,Smithing
 Shotel,006B1DE0,Smithing
 Siluria's Tree,0103B460,Somber
 Silver Firefly,4000514A,None
+Silver Grooved Armor (Altered),1051A6BC,None
+Silver Grooved Armor,1051A2D4,None
+Silver Grooved Gauntlets,1051A338,None
+Silver Grooved Greaves,1051A39C,None
+Silver Grooved Helm,1051A270,None
 Silver Grooved Shield,01E14320,Smithing
 Silver Horn Tender,401E8944,None
 Silver Mirrorshield,01D9F020,Somber
@@ -2901,6 +2915,9 @@ Spear of the Impaler,010B0760,Somber
 Spear Talisman,2000080C,None
 Spear,00F44B10,Smithing
 Speckled Hardtear,40002AFE,None
+Spectral Steed Regalia: Carian Silver,401EAA0A,None
+Spectral Steed Regalia: Funeral Night,401EAA14,None
+Spectral Steed Regalia: Tree Sentinel,401EAA00,None
 Spectral Steed Whistle,40000082,None
 Spectral Steed Whistle,400000B5,None
 Spellblade's Gloves,1001FC98,None
@@ -2968,6 +2985,10 @@ Starlight,4000102C,None
 Stars of Ruin,4000107C,None
 Starscourge Greatsword,003DCC50,Somber
 Starscourge Heirloom,20000424,None
+Steel Armor,1051F0F4,None
+Steel Gauntlets,1051F158,None
+Steel Greaves,1051F1BC,None
+Steel Helm,1051F090,None
 Steel-Wire Torch,016E8420,Smithing
 Stimulating Boluses,400003A2,None
 Stone Club,00A9FBA0,Smithing
@@ -3054,9 +3075,6 @@ Tooth Whip,0138CE20,Somber
 Torch,016E3600,Smithing
 Torchpole,00F55C80,Smithing
 Torn Diary Page,401EA3E0,None
-Torrent: Golden Horse,401EAA00,None
-Torrent: Night Horse,401EAA14,None
-Torrent: Silver Horse,401EAA0A,None
 Tower of Shadow Message,401EA3E5,None
 Toxic Mossling,401ED2AA,None
 Toxic Mushroom,40005122,None
