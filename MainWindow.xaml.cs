@@ -1371,7 +1371,7 @@ namespace EldenRingTool
                         webVersionStr = line.Substring(quoteStart, quoteEnd - quoteStart).TrimStart('v');
                     }
 
-                    if (currentVersion.CompareTo(new Version(webVersionStr)) != 0)
+                    if (currentVersion.CompareTo(new Version(webVersionStr)) < 0)
                     {
                         Dispatcher.Invoke(notifyOfUpdate);
                     }
